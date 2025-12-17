@@ -96,7 +96,7 @@ From this database, you can answer:
 
 - **LinkedIn:** https://www.linkedin.com/in/srivatsa-kurada
 - **Portfolio:** https://srivatsa-kurada-hmj3p8m.gamma.site/
-- **Email:** mailto:srivatsakurada@gmail.com
+- **Email:** srivatsakurada@gmail.com
 ```
 
 ---
