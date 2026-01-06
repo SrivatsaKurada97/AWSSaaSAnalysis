@@ -22,19 +22,19 @@ This project demonstrates end-to-end business intelligence development, from dat
 ## 🖼️ Screenshots
 
 ### Overview Dashboard
-![Overview Dashboard](screenshots/Overview.png)
+![Overview Dashboard](Screenshots/Overview.png)
 *High-level KPIs showing total customers, revenue, CLV distribution, and engagement metrics*
 
 ### Users & Events Analysis
-![Users & Events](screenshots/Users&Events.png)
+![Users & Events](Screenshots/Users&Events.png)
 *Detailed customer segmentation and event timeline analysis*
 
 ### Milestone Tracking
-![Milestones](screenshots/Milestones.png)
+![Milestones](Screenshots/Milestones.png)
 *Revenue milestone progression and customer lifecycle stages*
 
 ### AI Chat Interface
-![AI Chat](screenshots/AI_Chat.png)
+![AI Chat](Screenshots/AI_Chat.png)
 *Natural language queries powered by Claude AI with context-aware responses*
 
 ---
@@ -334,3 +334,4 @@ This project is available for portfolio and educational purposes.
 ---
 
 **⭐ If you found this project helpful, please consider giving it a star!**
+
