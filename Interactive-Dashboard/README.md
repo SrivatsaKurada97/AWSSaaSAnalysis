@@ -1,5 +1,3 @@
-
-```markdown
 # 🎯 AWS SaaS Customer Analytics Dashboard
 
 > **Interactive business intelligence dashboard built with Streamlit, SQL Server, and Claude AI to analyze customer lifecycle, revenue milestones, and engagement patterns.**
@@ -336,4 +334,3 @@ This project is available for portfolio and educational purposes.
 ---
 
 **⭐ If you found this project helpful, please consider giving it a star!**
-```
