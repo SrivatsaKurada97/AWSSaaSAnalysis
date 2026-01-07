@@ -5,8 +5,7 @@ import os
 from utils.data_loader import (
     load_customer_summary,
     load_event_data,
-    load_milestone_data_from_events,
-    load_features_table
+    load_milestone_data_from_events
 )
 
 # Import tab render functions
@@ -164,4 +163,5 @@ if __name__ == "__main__":
     
 
     main()
+
 
