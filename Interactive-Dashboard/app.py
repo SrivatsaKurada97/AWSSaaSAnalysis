@@ -2,7 +2,6 @@ import streamlit as st
 import logging
 import os
 
-from utils.database import test_connection
 from utils.data_loader import (
     get_customer_summary,
     load_users_with_events,
@@ -77,25 +76,6 @@ def main():
         st.markdown("Analyze user, revenue, and engagement metrics for your SaaS product.")
         st.markdown("---")
 
-        # Connection status
-        try:
-            connected = test_connection()
-        except Exception as e:
-            connected = False
-            logging.error(f"Connection test failed: {e}")
-
-        if connected:
-            st.markdown(
-                "<span class='connection-dot' style='background:#10b981'></span> Connected", 
-                unsafe_allow_html=True
-            )
-        else:
-            st.markdown(
-                "<span class='connection-dot' style='background:#ef4444'></span> Disconnected", 
-                unsafe_allow_html=True
-            )
-            st.error("⚠️ Cannot connect to database. Check connection settings.")
-
         # Refresh button
         if st.button("Refresh data", key="refresh_button"):
             st.cache_data.clear()
@@ -103,19 +83,7 @@ def main():
 
     # Header
     st.title("SaaS Product Adoption Analytics Dashboard")
-
-    # Load data (only if connected)
-    if not connected:
-        st.error("🔴 Database connection failed. Please check your database settings in `utils/database.py`.")
-        st.info("""
-        **Troubleshooting Steps:**
-        1. Verify SQL Server is running
-        2. Check database name matches (currently: AWSSaaSDB)
-        3. Verify ODBC driver is installed
-        4. Test connection: `python -c "from utils.database import test_connection; print(test_connection())"`
-        """)
-        st.stop()
-
+    
     # Load data with spinner - DIFFERENT DATA FOR EACH TAB
     with st.spinner("Loading data from database..."):
         try:
@@ -135,6 +103,8 @@ def main():
             st.error(f"Failed to load data: {e}")
             logging.exception("Data loading error")
             st.stop()
+
+        st.success("✅ Data loaded successfully")
 
     # Check if data is empty
     if df_summary.empty:
@@ -192,4 +162,5 @@ if __name__ == "__main__":
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
     
+
     main()
