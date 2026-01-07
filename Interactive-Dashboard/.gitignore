@@ -2,4 +2,3 @@ __pycache__/
    .streamlit/secrets.toml
    *.env
    .venv/
-   data/*.csv
