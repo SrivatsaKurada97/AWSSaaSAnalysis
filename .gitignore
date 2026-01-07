@@ -30,3 +30,6 @@ Desktop.ini
 # Sensitive data (if any)
 *.credentials
 connection_strings.txt
+
+# Streamlit
+streamlit/secrets.toml
