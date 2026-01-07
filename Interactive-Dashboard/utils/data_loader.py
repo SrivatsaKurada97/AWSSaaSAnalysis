@@ -7,7 +7,7 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 
 @st.cache_data
 def load_customer_summary():
-    """Load customer data from CSV"""
+    """Load customer data"""
     try:
         file_path = DATA_DIR / "aws_users.csv"
         df = pd.read_csv(file_path)
@@ -21,7 +21,7 @@ def load_customer_summary():
 
 @st.cache_data
 def load_event_data():
-    """Load event data from CSV"""
+    """Load event data"""
     try:
         file_path = DATA_DIR / "aws_events.csv"
         df = pd.read_csv(file_path)
@@ -35,7 +35,7 @@ def load_event_data():
 
 @st.cache_data
 def load_milestone_data_from_events():
-    """Load milestone data from CSV"""
+    """Load milestone data"""
     try:
         file_path = DATA_DIR / "aws_milestones.csv"
         if file_path.exists():
@@ -49,3 +49,4 @@ def load_milestone_data_from_events():
     except Exception as e:
         st.error(f"❌ Error loading milestones: {e}")
         return pd.DataFrame()
+
