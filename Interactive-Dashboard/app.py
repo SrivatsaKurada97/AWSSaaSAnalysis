@@ -3,8 +3,8 @@ import logging
 import os
 
 from utils.data_loader import (
-    get_customer_summary,
-    load_users_with_events,
+    load_customer_summary,
+    load_event_data,
     load_milestone_data_from_events,
     load_features_table
 )
@@ -88,10 +88,10 @@ def main():
     with st.spinner("Loading data from database..."):
         try:
             # Tab 1: Overview - needs customer summary
-            df_summary = get_customer_summary()
+            df_summary = load_customer_summary()
             
             # Tab 2: Users & Events - needs event detail
-            df_events = load_users_with_events()
+            df_events = load_event_data()
             
             # Tab 3: Milestones - needs milestone data
             df_milestones = load_milestone_data_from_events()
@@ -164,3 +164,4 @@ if __name__ == "__main__":
     
 
     main()
+
